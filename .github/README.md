@@ -1,11 +1,9 @@
 <h1 align="center">kawaleo.nvim</h1>
 
 <h4 align="center">
-  <a href="https://astronvim.github.io/#%EF%B8%8F-installation">Install</a>
+  <a href="https://astronvim.github.io/#%EF%B8%8F-installation">Installation</a>
   ·
-  <a href="https://astronvim.github.io/#%EF%B8%8F-configuration">Configure</a>
-  ·
-  <a href="https://astronvim.github.io">Docs</a>
+  <a href="https://astronvim.github.io/#%EF%B8%8F-configuration">Docs</a>
 </h4>
 
 <p align="center">
