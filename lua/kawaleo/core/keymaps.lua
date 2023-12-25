@@ -68,7 +68,7 @@ keymap("x", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
 -- Explore
-keymap("n", "<leader>e", "<Cmd>Ex<CR>", opts)
+keymap("n", "<leader>e", "<Cmd>NvimTreeToggle<CR>", opts)
 
 -- Telescope
 map("n", "<leader>cc", "<Cmd>Telescope colorscheme<CR>", opts)
