@@ -52,8 +52,8 @@ return packer.startup(function(use)
 	use("akinsho/toggleterm.nvim")
 	use("lewis6991/impatient.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
-	use("nvim-tree/nvim-tree.lua")
-	
+	use("eandrju/cellular-automaton.nvim")
+
 	-- Colorschemes
 	use("sainnhe/sonokai")
 	use("folke/tokyonight.nvim")
@@ -63,19 +63,19 @@ return packer.startup(function(use)
 	use("ellisonleao/gruvbox.nvim")
 	use("rebelot/kanagawa.nvim")
 	use("catppuccin/nvim") -- Aliased plugin with "as"
-	
-	-- Cmp 
+
+	-- Cmp
 	use("hrsh7th/nvim-cmp") -- The completion plugin
 	use("hrsh7th/cmp-buffer") -- Buffer completions
 	use("hrsh7th/cmp-path") -- Path completions
 	use("saadparwaiz1/cmp_luasnip") -- Snippet completions
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-nvim-lua")
-	
+
 	-- Snippets
 	use("L3MON4D3/LuaSnip") -- Snippet engine
 	use("rafamadriz/friendly-snippets") -- A bunch of snippets to use
-	
+
 	-- LSP
 	use("neovim/nvim-lspconfig") -- Enable LSP
 	use("williamboman/mason.nvim") -- Simple to use language server installer
@@ -86,15 +86,15 @@ return packer.startup(function(use)
 	use("simrat39/rust-tools.nvim")
 	use("nvim-lua/lsp_extensions.nvim")
 	use("mfussenegger/nvim-dap")
-	
+
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
-	
+
 	-- Treesitter
 	use("nvim-treesitter/nvim-treesitter")
-	
+
 	-- Git
-	use("lewis6991/gitsigns.nvim")	
+	use("lewis6991/gitsigns.nvim")
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
