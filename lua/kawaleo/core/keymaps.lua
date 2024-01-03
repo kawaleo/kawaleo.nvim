@@ -8,18 +8,9 @@ local map = vim.api.nvim_set_keymap
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+keymap("n", "<C-d>", "<C-d>zz")
+keymap("n", "<C-u>", "<C-u>zz")
 
--- Modes
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
-
--- Normal --
 -- Better window navigation
 keymap("n", "<leader><Left>", "<C-w>h", opts)
 keymap("n", "<leader><Down>", "<C-w>j", opts)
@@ -32,8 +23,8 @@ keymap("n", "<leader>sh", "<C-w>s", opts)
 keymap("n", "<leader>se", "<C-w>=", opts)
 keymap("n", "<leader>sx", ":close<CR>", opts)
 
-keymap("n", "<leader>,", "<Cmd>BufferLineCyclePrev<CR>", opts)
-keymap("n", "<leader>.", "<Cmd>BufferLineCycleNext<CR>", opts)
+keymap("n", "<leader>,", "<Cmd>bprev<CR>", opts)
+keymap("n", "<leader>.", "<Cmd>bnext<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -60,7 +51,6 @@ keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 keymap("v", "p", '"_dP', opts)
 
--- Visual Block --
 -- Move text up and down
 keymap("x", "J", ":m '>+1<CR>gv=gv", opts)
 keymap("x", "K", ":m '<-2<CR>gv=gv", opts)
@@ -68,20 +58,10 @@ keymap("x", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
 -- Explore
-keymap("n", "<leader>e", "<Cmd>NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>e", "<Cmd>Ex<CR>", opts)
 
 -- Telescope
+map("n", "<leader>ff", "<Cmd>Telescope find_files<Cr>", opts)
 map("n", "<leader>cc", "<Cmd>Telescope colorscheme<CR>", opts)
-
--- Paste from system register (best command ever)
-keymap("n", "<leader>z", '"*p', opts)
-keymap("x", "<C-g>", '"*y', opts)
-
--- Terminal --
--- Better terminal navigation
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
 keymap("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>")
