@@ -2,12 +2,12 @@ return {
 	"nvim-lua/plenary.nvim",
 	-- Autopairs, integrates with both cmp and treesitter
 	"windwp/nvim-autopairs",
-	"numToStr/Comment.nvim",
 	"JoosepAlviste/nvim-ts-context-commentstring",
 	"kyazdani42/nvim-web-devicons",
 	"moll/vim-bbye",
 	"nvim-lualine/lualine.nvim",
 	"akinsho/toggleterm.nvim",
+	"ThePrimeagen/harpoon",
 	"lewis6991/impatient.nvim",
 	"nvimdev/dashboard-nvim",
 	"lukas-reineke/indent-blankline.nvim",
@@ -17,6 +17,7 @@ return {
 	"xiyaowong/transparent.nvim",
 	-- Colorschemes
 	"sainnhe/sonokai",
+	"Mofiqul/dracula.nvim",
 	"folke/tokyonight.nvim",
 	"EdenEast/nightfox.nvim",
 	"rose-pine/neovim",
@@ -25,9 +26,10 @@ return {
 	"rebelot/kanagawa.nvim",
 	-- Aliased plugin with "as"
 	"catppuccin/nvim",
-	-- Cmp
+
+	{ "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
 	"hrsh7th/nvim-cmp", -- The completion plugin
-	"hrsh7th/cmp-buffer", -- Buffer completions
+	"hrsh7th/cmp-buffer",
 	"hrsh7th/cmp-path", -- Path completions
 	"saadparwaiz1/cmp_luasnip", -- Snippet completions
 	"hrsh7th/cmp-nvim-lsp",
@@ -48,6 +50,5 @@ return {
 	"nvim-telescope/telescope.nvim",
 	-- Treesitter
 	"nvim-treesitter/nvim-treesitter",
-	-- Git
-	"lewis6991/gitsigns.nvim",
+	"nvim-treesitter/nvim-treesitter-context",
 }

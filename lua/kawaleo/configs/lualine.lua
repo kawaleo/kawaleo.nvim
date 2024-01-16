@@ -7,7 +7,12 @@ require("lualine").setup({
 
 	sections = {
 		lualine_a = {
-			{ "buffers" },
+			"mode",
+		},
+		lualine_b = {
+			"branch",
+			"diff",
+			"diagnostics",
 		},
 	},
 })

@@ -6,18 +6,17 @@ local term_opts = { silent = true }
 local keymap = vim.keymap.set
 local map = vim.api.nvim_set_keymap
 
---Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
-keymap("n", "<C-d>", "<C-d>zz")
-keymap("n", "<C-u>", "<C-u>zz")
 
--- Better window navigation
+keymap("n", "<leader>p", '"0P', opts)
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
+
 keymap("n", "<leader><Left>", "<C-w>h", opts)
 keymap("n", "<leader><Down>", "<C-w>j", opts)
 keymap("n", "<leader><Up>", "<C-w>k", opts)
 keymap("n", "<leader><Right>", "<C-w>l", opts)
 
--- Split Screens (vertical, horizontal)
 keymap("n", "<leader>sv", "<C-w>v", opts)
 keymap("n", "<leader>sh", "<C-w>s", opts)
 keymap("n", "<leader>se", "<C-w>=", opts)
@@ -25,12 +24,6 @@ keymap("n", "<leader>sx", ":close<CR>", opts)
 
 keymap("n", "<leader>,", "<Cmd>bprev<CR>", opts)
 keymap("n", "<leader>.", "<Cmd>bnext<CR>", opts)
-
--- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", ":m .+1<CR>==", opts)
